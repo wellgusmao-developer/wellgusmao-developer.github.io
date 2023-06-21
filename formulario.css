@@ -1,0 +1,49 @@
+body {
+    color: rgb(2, 2, 2);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(212, 212, 247);
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+}
+
+h1{
+    font-size: 20px;
+}
+.center {
+    text-align: center;
+}
+
+.container {
+    padding: 0px 20px;
+}
+
+.formulario input{
+    width: 100%;
+    padding: 8px 0;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px #00000040;
+}
+
+.formulario input:hover{
+    background-color: #ecebeb75;
+}
+
+
+button {
+    color: rgb(248, 243, 243);
+    background-color: rgb(20, 4, 240);
+    border: none;
+    width: 125px;
+    height: 35px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px #00000040;
+}
+
+button:hover{
+    background-color: #1a91f375;
+}
