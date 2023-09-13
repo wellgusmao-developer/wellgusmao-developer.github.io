@@ -3,6 +3,6 @@
 
 Wellington Leite Gusmão
 
-Desenvolvendo Site com calculo de tempo entre datas de inclusão 
+Desenvolvendo Site com calculo de tempo de serviço, ou diferença entre datas.
 
-Finalidade: tempo de serviço para militares
+Finalidade: conferir o tempo de serviço
