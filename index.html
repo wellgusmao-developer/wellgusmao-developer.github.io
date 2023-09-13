@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tempo de Serviço</title>
+</head>
+
+<body>
+    <main>
+            <div class="container">
+                <img src="img/calendar.png">
+                <h2 class="page-subtitle">
+                Calcular Tempo de Serviço</h2>
+                <h3 class="indicador">
+                Data de Inclusão:</h3>
+                <input type="date" name="date1Input" id="date1Input">
+                <h3 class="indicador">
+                Data Final:</h3>
+                <input type="date" name="date2Input" id="date2Input"/><br>
+                <button type="submit" onclick="calcular()">Calcular</button>
+                <header>
+                    <div id="result"></div>
+                </header>     
+            </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 - Todos os direitos reservados</p>
+        <nav>
+            <ul>
+                <li><a href="#">Termos de uso</a></li>
+                <li><a href="#">Política de privacidade</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
