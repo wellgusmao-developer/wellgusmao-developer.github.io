@@ -4,45 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X5TTTZE4ED"></script>
-    <title>Tempo de Serviço</title>
+    <title>Tempo de Serviço do Trabalhador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
 </head>
-
 <body>
-    <main>
-        <div class="container">
-                <img src="img/calendar.png">
-                <h2 class="page-subtitle">
-                Calcular Tempo de Serviço</h2>
-                <h3 class="indicador">
-                Data de Inclusão:</h3>
-                <input type="date" name="date1Input" id="date1Input">
-                <h3 class="indicador">
-                Data Final:</h3>
-                <input type="date" name="date2Input" id="date2Input"/><br>
-                <button type="submit" onclick="calcular()">Calcular</button>
-                <header>
-                    <div id="result"></div>
-                </header>     
-        </div>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-          
-            gtag('config', 'G-X5TTTZE4ED');
-          </script>
-    </main>
+    <h1>Tempo de Serviço do Militar</h1>
+
+    <label for="dataInicial">Data de Inclusão:</label>
+    <input type="date" id="dataInicial">
+
+    <label for="dataFinal">Data do Pedido da Reserva:</label>
+    <input type="date" id="dataFinal">
+
+    <label for="averbacaoAnos">Averbação de Serviço (Anos):</label>
+    <input type="number" id="averbacaoAnos" min="0" placeholder="Anos">
+
+    <label for="averbacaoMeses">Averbação de Serviço (Meses):</label>
+    <input type="number" id="averbacaoMeses" min="0" max="11" placeholder="Meses">
+
+    <label for="averbacaoDias">Averbação de Serviço (Dias):</label>
+    <input type="number" id="averbacaoDias" min="0" max="30" placeholder="Dias">
+
+    <button onclick="calcularTempo()">Calcular Tempo de Serviço</button>
+
+    <h2>Tempo de Serviço Total:</h2>
+    <div id="tempoDeServico"></div>
+
     <footer>
-        <ul>
-            <li><a href="#" class="fa fa-github"></a></li>
-            <li><a href="#" class="fa fa-twitter"></a></li>
-            <li><a href="#" class="fa fa-instagram"></a></li>
-        </ul>      
-        <p>Author: Wellington Leite Gusmão<br></p>
-        <p><a href="mailto:wellingtongusmao18@gmail.com">wellingtongusmao18@gmail.com</a></p>
-      </footer>
-    <script type="text/javascript" src="script.js"></script>
+        <p>Criado por: Wellington Leite Gusmão</p>
+        <p>Contato: wellingtongusmao18@gmail.com</p>
+    </footer>
+
+    <script>
+        function calcularTempo() {
+            var dataInicial = new Date(document.getElementById("dataInicial").value);
+            var dataFinal = new Date(document.getElementById("dataFinal").value);
+
+            var averbacaoAnos = parseInt(document.getElementById("averbacaoAnos").value) || 0;
+            var averbacaoMeses = parseInt(document.getElementById("averbacaoMeses").value) || 0;
+            var averbacaoDias = parseInt(document.getElementById("averbacaoDias").value) || 0;
+
+            var totalDias = Math.ceil((dataFinal - dataInicial) / (1000 * 60 * 60 * 24));
+
+            // Adiciona o tempo de averbação ao total de dias
+            totalDias += averbacaoAnos * 365 + averbacaoMeses * 30 + averbacaoDias;
+
+            var anosTotais = Math.floor(totalDias / 365);
+            var mesesTotais = Math.floor((totalDias % 365) / 30);
+            var diasTotais = (totalDias % 365) % 30;
+
+            var tempoDeServicoElement = document.getElementById("tempoDeServico");
+
+            tempoDeServicoElement.innerHTML = "<p>" + anosTotais + " anos, " + mesesTotais + " meses, " + diasTotais + " dias</p>";
+        }
+    </script>
 </body>
 </html>
