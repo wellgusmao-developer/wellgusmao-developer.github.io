@@ -3,6 +3,6 @@
 
 Wellington Leite Gusmão
 
-Desenvolvendo Site com calculo de tempo de serviço de Militar, com opção de inclusão de averbacção de tempo de Serviço em carreira privada.
+Desenvolvendo Site com calculo de tempo de serviço de Militar, com opção de inclusão de averbação de tempo de Serviço em carreira privada.
 
 Finalidade: conferir o tempo de serviço
