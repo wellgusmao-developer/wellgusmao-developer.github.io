@@ -6,12 +6,14 @@
     <title>Tempo de Serviço do Trabalhador</title>
     <!-- Adicionando o CSS do Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Adicionando o Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Adicionando o CSS personalizado -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center mb-4">TEMPO DE SERVIÇO</h1>
+        <h1 class="text-center mb-4">Tempo de Serviço do Militar</h1>
 
         <div class="mb-3">
             <label for="dataInicial" class="form-label">Data de Inclusão:</label>
@@ -46,17 +48,38 @@
         </h2>
     </div>
 
-    <footer>
-        <p>Criado por: Gusmão</p>
-        <p>Contato: <a href="mailto:wellingtongusmao18@gmail.com" class="text-light">wellingtongusmao18@gmail.com</a></p>
+    <!-- Footer Moderno com Avatar -->
+    <footer class="bg-dark text-white text-center mt-5 p-4">
+        <div class="container">
+            <!-- Imagem do avatar -->
+            <img src="./img/unnamed.jpg" class="avatar img-fluid rounded-circle mb-3" alt="">
+
+            <!-- Ícones das redes sociais -->
+            <div class="social-icons">
+                <a href="https://www.instagram.com/seu_perfil" target="_blank" class="me-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/seu_perfil" target="_blank" class="me-4">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/seu_perfil" target="_blank" class="me-4">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2024 Copyright:
+            <a class="text-white" href="#">Wellington Leite Gusmão</a>
+        </div>
     </footer>
 
-    <!-- Modal de erro -->
+    <!-- Modal de Atenção -->
     <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="errorModalLabel">Erro</h5>
+                    <h5 class="modal-title text-black" id="errorModalLabel">Atenção</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="errorMessage">
