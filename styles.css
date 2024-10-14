@@ -1,0 +1,449 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a fonte "Inter" para o corpo do site */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Espaça logo e links */
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    z-index: 10; /* Coloca a barra de navegação acima de tudo */
+    position: relative; /* Para garantir que o z-index funcione */
+}
+
+.navbar .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem; /* Tamanho do logo/nome */
+    font-weight: 600; /* Peso da fonte */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex; /* Garante que os links apareçam no desktop */
+    gap: 2rem;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: #ff5e57;
+}
+
+/* Estilo do ícone de hambúrguer */
+.hamburger {
+    display: none; /* Esconde o ícone no desktop */
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10; /* Coloca o ícone de hambúrguer acima do overlay */
+}
+
+.hamburger i {
+    color: white;
+}
+
+/* Responsividade da Navbar */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Mostra o ícone no responsivo */
+    }
+
+    /* Esconde os links inicialmente no responsivo */
+    .navbar .nav-links {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        text-align: center;
+        z-index: 10; /* Coloca os links acima do overlay */
+        transition: visibility 0s, opacity 0.3s ease; /* Suaviza a mudança de visibilidade e opacidade */
+    }
+
+    
+    .navbar .nav-links.show {
+        display: flex; /* Mostra os links ao clicar no hambúrguer */
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .navbar .logo {
+        margin-right: auto;
+    }
+}
+
+/* Seção de Apresentação */
+.home {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 10%;
+    background: linear-gradient(135deg, #050505, #c50000); /* Gradiente para o fundo */
+    color: white;
+    text-align: center;
+    overflow: hidden; /* Para lidar com a imagem de background */
+}
+
+.home .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Fundo escurecido para contraste */
+    z-index: 1; /* Colocar abaixo do conteúdo */
+}
+
+.home .content {
+    position: relative;
+    z-index: 2; /* Colocar o conteúdo acima do overlay */
+    max-width: 50%;
+    text-align: left; /* Alinhamento à esquerda em telas maiores */
+}
+
+.home h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.home p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    max-width: 90%;
+}
+
+.home .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #ff5e57;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.home .btn:hover {
+    background-color: #e94e43;
+}
+
+.home .profile-pic img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Para garantir que a imagem fique no topo */
+}
+
+/* Adiciona animação suave na seção */
+.home .content, .home .profile-pic {
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Configuração responsiva Apresentação */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center; /* Centraliza o texto em telas pequenas */
+    }
+
+    .home .content, .home .profile-pic {
+        max-width: 100%;
+        margin-bottom: 2rem; /* Adiciona espaço entre os elementos em layout empilhado */
+    }
+
+    .home h1 {
+        font-size: 1.8rem; /* Diminui o tamanho da fonte em telas menores */
+    }
+
+    .home p {
+        font-size: 0.8rem;
+    }
+
+    .home .profile-pic img {
+        width: 150px; /* Reduz o tamanho da imagem em telas menores */
+        height: 150px;
+    }
+}
+
+
+/* Seção de Especialidades */
+.especialidades {
+    padding: 5rem 10%;
+    background-color: #fff;
+}
+
+.especialidades h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.especialidades .services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.especialidades .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    width: 30%;
+    margin-bottom: 2rem;
+    /* Define uma altura mínima para padronizar o layout */
+    min-height: 450px;
+}
+
+/* Ajusta as imagens para o mesmo tamanho */
+.especialidades .service img {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem seja cortada para caber no espaço */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.especialidades .service-info h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.especialidades .service-info p {
+    font-weight: 400;
+    margin-bottom: 1rem;
+    /* Mantém o texto em alturas padronizadas */
+    min-height: 100px;
+}
+
+.especialidades .service-info a {
+    color: #ff5e57;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.especialidades .service-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade Especialidades */
+@media (max-width: 768px) {
+    .especialidades .services {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .especialidades .service {
+        width: 100%;
+    }
+}
+
+/* Seção de Contato */
+.contato {
+    padding: 5rem 10%;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contato form input,
+.contato form textarea {
+    width: 100%; /* Define a largura total dos campos */
+    padding: 1rem;
+    margin-bottom: 1rem; /* Espaçamento entre os campos */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para destaque */
+}
+
+.contato form textarea {
+    height: 150px; /* Ajusta a altura para o campo de mensagem */
+}
+
+.contato form .btn {
+    background-color: #ff5e57;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+.contato form .btn:hover {
+    background-color: #e94e43; /* Cor de hover no botão */
+}
+
+/* Estilo para o link do WhatsApp */
+.whatsapp-text {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.whatsapp-text a {
+    color: #25D366;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.whatsapp-text a:hover {
+    color: #1EBE56;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contato {
+        padding: 3rem 5%;
+    }
+
+    .contato form {
+        width: 100%;
+    }
+
+    .contato form .btn {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff5e57;
+}
+
+/* Responsividade para o rodapé */
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.8rem;
+        padding: 1rem 0;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilos para a página de agradecimento */
+.thank-you-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.thank-you-container h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.thank-you-container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.thank-you-container .btn {
+    padding: 0.7rem 1.5rem;
+    background-color: #ff5e57;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.thank-you-container .btn:hover {
+    background-color: #e94e43;
+}
