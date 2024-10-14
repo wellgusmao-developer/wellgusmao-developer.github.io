@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio de um desenvolvedor web e web designer">
     <title>Portfólio - Developer & Web Designer</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Portfólio - Developer & Web Designer">
+    <meta property="og:description" content="Desenvolvedor web especializado em soluções modernas, design responsivo e experiências de usuário excepcionais.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/47697200?v=4">
+    <meta property="og:url" content="https://wellgusmao-developer.github.io">
+    <meta property="og:type" content="website">
+
+    <!-- Fontes e Estilos -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -15,11 +24,15 @@
 <!-- Menu de navegação -->
 <nav class="navbar">
     <div class="logo">
-        <a href="#home">Portfólio</a>
+        <a href="#home">
+            <img src="img/logo-removebg-preview.png" alt="Logo do Portfólio" class="logo-img">
+        </a>
     </div>
     <ul class="nav-links">
         <li><a href="#home">Início</a></li>
         <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#clientes">Clientes</a></li>
         <li><a href="#contato">Contato</a></li>
     </ul>
     <div class="hamburger">
@@ -70,7 +83,55 @@
         </div>
     </div>
 </section>
-
+<!-- Seção de Projetos -->
+<section id="projetos" class="projetos">
+    <h2>Projetos Recentes</h2>
+    <div class="projetos-container">
+        <div class="projeto-card">
+            <img src="img/template_portfolio_medical.png" alt="Site para a área da saúde" class="projeto-img" onclick="openModal(this)">
+            <div class="projeto-info">
+                <h3>Site para a Área da Saúde</h3>
+                <p>Este projeto foi desenvolvido para um consultório médico, com funcionalidades de agendamento online, consultas virtuais e integração com um sistema de prontuários eletrônicos.</p>
+            </div>
+        </div>
+        <div class="projeto-card">
+            <img src="img/template_e-comerce.jpg" alt="Site de E-commerce" class="projeto-img" onclick="openModal(this)">
+            <div class="projeto-info">
+                <h3>Site de E-commerce para Loja</h3>
+                <p>Desenvolvimento de uma plataforma de e-commerce completa para uma loja de roupas, com carrinho de compras, área de cliente, pagamentos integrados e controle de estoque.</p>
+            </div>
+        </div>
+        <!-- Estrutura do Modal -->
+        <div id="modal" class="modal">
+          <span class="close">&times;</span> <!-- Botão para fechar o modal -->
+          <img class="modal-content" id="modal-img">
+        <div id="caption"></div> <!-- Legenda opcional -->
+        </div>
+    </div>
+</section>
+<!-- Seção de Clientes -->
+<section id="clientes" class="clientes">
+    <h2>Depoimentos de Clientes</h2>
+    <div class="clientes-container">
+        <div class="cliente-card">
+            <img src="img/9C57610E-26FD-4F53-8B35-6252846D7253.WEBP"Cliente 1" class="cliente-img">
+            <h3>Cliente 1</h3>
+            <p>"A experiência de trabalhar com este desenvolvedor foi incrível. Altamente recomendável!"</p>
+        </div>
+        <div class="cliente-card">
+            <img src="img/C5092B39-E4B9-40EC-A3A2-914A24D86D1F.WEBP"Cliente 2" class="cliente-img">
+            <h3>Cliente 2</h3>
+            <p>"Serviço excepcional! O projeto foi entregue antes do prazo e superou as expectativas."</p>
+        </div>
+        <div class="cliente-card">
+            <img src="img/F52A5B37-96C1-4AEA-9768-637AF297A256.WEBP" alt="Cliente 3" class="cliente-img">
+            <h3>Cliente 3</h3>
+            <p>"Profissionalismo e dedicação. Recomendo para qualquer projeto de desenvolvimento web."</p>
+        </div>
+            <!-- Texto de aviso de imagens ilustrativas -->
+    <p class="imagem-ilustrativa">* Imagens meramente ilustrativas</p>
+    </div>
+</section>
 <!-- Seção de Contato -->
 <section id="contato" class="contato">
     <h2>Entre em Contato</h2>
