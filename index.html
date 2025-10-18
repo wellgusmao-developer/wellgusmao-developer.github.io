@@ -47,13 +47,19 @@
         </button>
 
         <ul class="nav-links">
-            <li><a href="#home">Início</a></li>
-            <li><a href="#especialidades">Serviços</a></li>
-            <li><a href="#planejamento">Planejamento</a></li>
-            <li><a href="#banco">Banco de Dados</a></li>
-            <li><a href="#python">Automação (Python)</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="#home" data-pt="Início" data-en="Home">Início</a></li>
+            <li><a href="#especialidades" data-pt="Serviços" data-en="Services">Serviços</a></li>
+            <li><a href="#planejamento" data-pt="Planejamento" data-en="Planning">Planejamento</a></li>
+            <li><a href="#banco" data-pt="Banco de Dados" data-en="Database">Banco de Dados</a></li>
+            <li><a href="#python" data-pt="Automação" data-en="Automation">Automação</a></li>
+            <li><a href="#projetos" data-pt="Projetos" data-en="Projects">Projetos</a></li>
+            <li><a href="#contato" data-pt="Contato" data-en="Contact">Contato</a></li>
+            <li>
+                <button class="language-switcher" id="languageSwitcher" aria-label="Mudar idioma para Inglês">
+                    <i class="fas fa-globe"></i>
+                    <span>EN</span>
+                </button>
+            </li>
         </ul>
     </div>
 </nav>
@@ -62,16 +68,22 @@
 <header id="home" class="hero section">
     <div class="hero-grid">
         <div class="hero-left reveal">
-            <h1>Criamos <span class="accent">sites modernos</span> e <span class="mono">automação em Python</span> para empresas e profissionais.</h1>
-            <p class="lead">Design responsivo, sistemas com banco de dados e soluções que automatizam tarefas repetitivas — tudo para você ganhar tempo e gerar resultados.</p>
+            <h1 data-pt="Criamos <span class='accent'>sites modernos</span> e <span class='mono'>automação em Python</span> para empresas e profissionais." 
+                data-en="We create <span class='accent'>modern websites</span> and <span class='mono'>Python automation</span> for businesses and professionals.">
+                Criamos <span class="accent">sites modernos</span> e <span class="mono">automação em Python</span> para empresas e profissionais.
+            </h1>
+            <p class="lead" data-pt="Design responsivo, sistemas com banco de dados e soluções que automatizam tarefas repetitivas — tudo para você ganhar tempo e gerar resultados."
+               data-en="Responsive design, database systems and solutions that automate repetitive tasks — everything to save you time and generate results.">
+                Design responsivo, sistemas com banco de dados e soluções que automatizam tarefas repetitivas — tudo para você ganhar tempo e gerar resultados.
+            </p>
             <div class="hero-cta">
-                <a class="btn primary" href="#projetos">Ver Projetos</a>
-                <a class="btn ghost" href="#contato">Solicitar Orçamento</a>
+                <a class="btn primary" href="#projetos" data-pt="Ver Projetos" data-en="View Projects">Ver Projetos</a>
+                <a class="btn ghost" href="#contato" data-pt="Solicitar Orçamento" data-en="Request Quote">Solicitar Orçamento</a>
             </div>
             <ul class="hero-features">
-                <li><i class="fas fa-check-circle"></i> Entregas responsivas</li>
-                <li><i class="fas fa-database"></i> Sistemas com banco de dados</li>
-                <li><i class="fab fa-python"></i> Automação com Python</li>
+                <li><i class="fas fa-check-circle"></i> <span data-pt="Entregas responsivas" data-en="Responsive delivery">Entregas responsivas</span></li>
+                <li><i class="fas fa-database"></i> <span data-pt="Sistemas com banco de dados" data-en="Database systems">Sistemas com banco de dados</span></li>
+                <li><i class="fab fa-python"></i> <span data-pt="Automação com Python" data-en="Automation with Python">Automação com Python</span></li>
             </ul>
         </div>
 
@@ -79,11 +91,14 @@
             <div class="card-profile">
                 <img src="img/gusmao.png" alt="Wellington Gusmão" class="avatar">
                 <h3>Wellington Gusmão</h3>
-                <p class="muted">Desenvolvedor Web • Automação em Python • Sistemas</p>
+                <p class="muted" data-pt="Desenvolvedor Web • Automação em Python • Sistemas"
+                   data-en="Web Developer • Python Automation • Systems">
+                    Desenvolvedor Web • Automação em Python • Sistemas
+                </p>
                 <div class="skills">
                     <span>HTML</span><span>CSS</span><span>JS</span><span>PHP</span><span>Python</span><span>MySQL</span>
                 </div>
-                <a class="btn small" href="#contato">Contrate-me</a>
+                <a class="btn small" href="#contato" data-pt="Contrate-me" data-en="Hire Me">Contrate-me</a>
             </div>
         </div>
     </div>
@@ -92,32 +107,47 @@
 <!-- ESPECIALIDADES / SERVIÇOS -->
 <section id="especialidades" class="section services">
     <div class="container">
-        <h2 class="section-title reveal">Minhas Especialidades</h2>
-        <p class="section-subtitle reveal">Ofereço soluções completas: do planejamento e design à programação e automação.</p>
+        <h2 class="section-title reveal" data-pt="Minhas Especialidades" data-en="My Specialties">Minhas Especialidades</h2>
+        <p class="section-subtitle reveal" data-pt="Ofereço soluções completas: do planejamento e design à programação e automação."
+           data-en="I offer complete solutions: from planning and design to programming and automation.">
+            Ofereço soluções completas: do planejamento e design à programação e automação.
+        </p>
 
         <div class="services-grid">
             <article class="service-card reveal">
                 <div class="icon"><i class="fas fa-code"></i></div>
-                <h3>Desenvolvimento Web</h3>
-                <p>Sites modernos, rápidos e otimizados — landing pages, blogs, e-commerces e portfólios com foco em conversão.</p>
+                <h3 data-pt="Desenvolvimento Web" data-en="Web Development">Desenvolvimento Web</h3>
+                <p data-pt="Sites modernos, rápidos e otimizados — landing pages, blogs, e-commerces e portfólios com foco em conversão."
+                   data-en="Modern, fast and optimized websites — landing pages, blogs, e-commerce and portfolios focused on conversion.">
+                    Sites modernos, rápidos e otimizados — landing pages, blogs, e-commerces e portfólios com foco em conversão.
+                </p>
             </article>
 
             <article class="service-card reveal">
                 <div class="icon"><i class="fas fa-database"></i></div>
-                <h3>Sistemas com Banco de Dados</h3>
-                <p>Arquitetura de dados, CRUDs, painéis administrativos e relatórios — bancos como MySQL/Postgres para alto desempenho.</p>
+                <h3 data-pt="Sistemas com Banco de Dados" data-en="Database Systems">Sistemas com Banco de Dados</h3>
+                <p data-pt="Arquitetura de dados, CRUDs, painéis administrativos e relatórios — bancos como MySQL/Postgres para alto desempenho."
+                   data-en="Data architecture, CRUDs, admin panels and reports — databases like MySQL/Postgres for high performance.">
+                    Arquitetura de dados, CRUDs, painéis administrativos e relatórios — bancos como MySQL/Postgres para alto desempenho.
+                </p>
             </article>
 
             <article class="service-card reveal">
                 <div class="icon"><i class="fab fa-python"></i></div>
-                <h3>Automatizações (Python)</h3>
-                <p>Automatizo tarefas: integração de APIs, envio de relatórios, bots para WhatsApp/Telegram, scraping e ETL simples.</p>
+                <h3 data-pt="Automatizações (Python)" data-en="Automation (Python)">Automatizações (Python)</h3>
+                <p data-pt="Automatizo tarefas: integração de APIs, envio de relatórios, bots para WhatsApp/Telegram, scraping e ETL simples."
+                   data-en="I automate tasks: API integration, report sending, WhatsApp/Telegram bots, scraping and simple ETL.">
+                    Automatizo tarefas: integração de APIs, envio de relatórios, bots para WhatsApp/Telegram, scraping e ETL simples.
+                </p>
             </article>
 
             <article class="service-card reveal">
                 <div class="icon"><i class="fas fa-paint-brush"></i></div>
-                <h3>Design & UX</h3>
-                <p>UI limpo e usabilidade pensada para aumentar engajamento — design responsivo e acessível.</p>
+                <h3 data-pt="Design & UX" data-en="Design & UX">Design & UX</h3>
+                <p data-pt="UI limpo e usabilidade pensada para aumentar engajamento — design responsivo e acessível."
+                   data-en="Clean UI and usability designed to increase engagement — responsive and accessible design.">
+                    UI limpo e usabilidade pensada para aumentar engajamento — design responsivo e acessível.
+                </p>
             </article>
         </div>
     </div>
@@ -126,89 +156,136 @@
 <!-- PLANEJAMENTO -->
 <section id="planejamento" class="section planning">
     <div class="container reveal">
-        <h2 class="section-title">Planejamento de Sites</h2>
-        <p class="section-subtitle">Processo claro e colaborativo — reduz risco e evita retrabalho.</p>
+        <h2 class="section-title" data-pt="Planejamento de Sites" data-en="Website Planning">Planejamento de Sites</h2>
+        <p class="section-subtitle" data-pt="Processo claro e colaborativo — reduz risco e evita retrabalho."
+           data-en="Clear and collaborative process — reduces risk and avoids rework.">
+            Processo claro e colaborativo — reduz risco e evita retrabalho.
+        </p>
 
         <div class="timeline">
             <div class="timeline-step">
-                <h4>1. Briefing</h4>
-                <p>Entrevista para entender seu público, objetivos e prioridades.</p>
+                <h4 data-pt="1. Briefing" data-en="1. Briefing">1. Briefing</h4>
+                <p data-pt="Entrevista para entender seu público, objetivos e prioridades."
+                   data-en="Interview to understand your audience, objectives and priorities.">
+                    Entrevista para entender seu público, objetivos e prioridades.
+                </p>
             </div>
 
             <div class="timeline-step">
-                <h4>2. Arquitetura e Wireframe</h4>
-                <p>Organizo conteúdo e navegação para garantir fluxo do usuário.</p>
+                <h4 data-pt="2. Arquitetura e Wireframe" data-en="2. Architecture & Wireframe">2. Arquitetura e Wireframe</h4>
+                <p data-pt="Organizo conteúdo e navegação para garantir fluxo do usuário."
+                   data-en="I organize content and navigation to ensure user flow.">
+                    Organizo conteúdo e navegação para garantir fluxo do usuário.
+                </p>
             </div>
 
             <div class="timeline-step">
-                <h4>3. Design Visual</h4>
-                <p>Layout moderno, identidade visual e protótipo responsivo.</p>
+                <h4 data-pt="3. Design Visual" data-en="3. Visual Design">3. Design Visual</h4>
+                <p data-pt="Layout moderno, identidade visual e protótipo responsivo."
+                   data-en="Modern layout, visual identity and responsive prototype.">
+                    Layout moderno, identidade visual e protótipo responsivo.
+                </p>
             </div>
 
             <div class="timeline-step">
-                <h4>4. Desenvolvimento & Testes</h4>
-                <p>Coding, integração com banco de dados e testes em múltiplos dispositivos.</p>
+                <h4 data-pt="4. Desenvolvimento & Testes" data-en="4. Development & Testing">4. Desenvolvimento & Testes</h4>
+                <p data-pt="Coding, integração com banco de dados e testes em múltiplos dispositivos."
+                   data-en="Coding, database integration and testing on multiple devices.">
+                    Coding, integração com banco de dados e testes em múltiplos dispositivos.
+                </p>
             </div>
 
             <div class="timeline-step">
-                <h4>5. Entrega & Monitoramento</h4>
-                <p>Deploy, treinamento e acompanhamento inicial com relatórios.</p>
+                <h4 data-pt="5. Entrega & Monitoramento" data-en="5. Delivery & Monitoring">5. Entrega & Monitoramento</h4>
+                <p data-pt="Deploy, treinamento e acompanhamento inicial com relatórios."
+                   data-en="Deploy, training and initial monitoring with reports.">
+                    Deploy, treinamento e acompanhamento inicial com relatórios.
+                </p>
             </div>
         </div>
-
     </div>
 </section>
 
 <!-- BANCO DE DADOS -->
 <section id="banco" class="section database">
     <div class="container reveal">
-        <h2 class="section-title">Como um Banco de Dados Ajuda Seu Negócio</h2>
-        <p class="section-subtitle">Armazenar, consultar e transformar dados em ação.</p>
+        <h2 class="section-title" data-pt="Como um Banco de Dados Ajuda Seu Negócio" data-en="How a Database Helps Your Business">Como um Banco de Dados Ajuda Seu Negócio</h2>
+        <p class="section-subtitle" data-pt="Armazenar, consultar e transformar dados em ação."
+           data-en="Store, query and transform data into action.">
+            Armazenar, consultar e transformar dados em ação.
+        </p>
 
         <div class="db-grid">
             <div class="db-card">
-                <h3>Organização</h3>
-                <p>Registre clientes, pedidos e histórico de forma segura e estruturada.</p>
+                <h3 data-pt="Organização" data-en="Organization">Organização</h3>
+                <p data-pt="Registre clientes, pedidos e histórico de forma segura e estruturada."
+                   data-en="Register customers, orders and history in a secure and structured way.">
+                    Registre clientes, pedidos e histórico de forma segura e estruturada.
+                </p>
             </div>
             <div class="db-card">
-                <h3>Relatórios</h3>
-                <p>Gere relatórios e análises para decisões estratégicas.</p>
+                <h3 data-pt="Relatórios" data-en="Reports">Relatórios</h3>
+                <p data-pt="Gere relatórios e análises para decisões estratégicas."
+                   data-en="Generate reports and analysis for strategic decisions.">
+                    Gere relatórios e análises para decisões estratégicas.
+                </p>
             </div>
             <div class="db-card">
-                <h3>Escalabilidade</h3>
-                <p>Bancos bem modelados crescem com seu negócio sem perda de performance.</p>
+                <h3 data-pt="Escalabilidade" data-en="Scalability">Escalabilidade</h3>
+                <p data-pt="Bancos bem modelados crescem com seu negócio sem perda de performance."
+                   data-en="Well-modeled databases grow with your business without performance loss.">
+                    Bancos bem modelados crescem com seu negócio sem perda de performance.
+                </p>
             </div>
         </div>
 
-            <div class="db-example">
-                <pre>Ex: tabela clientes (id, nome, email, telefone, criado_em)</pre>
-            </div>
+        <div class="db-example">
+            <pre data-pt="Ex: tabela clientes (id, nome, email, telefone, criado_em)" 
+                 data-en="Ex: customers table (id, name, email, phone, created_at)">
+                Ex: tabela clientes (id, nome, email, telefone, criado_em)
+            </pre>
+        </div>
     </div>
 </section>
 
 <!-- PYTHON / AUTOMAÇÃO -->
 <section id="python" class="section python">
     <div class="container reveal">
-        <h2 class="section-title">Automatizações em Python</h2>
-        <p class="section-subtitle">Economize tempo: processos repetitivos transformados em scripts confiáveis.</p>
+        <h2 class="section-title" data-pt="Automatizações em Python" data-en="Python Automations">Automatizações em Python</h2>
+        <p class="section-subtitle" data-pt="Economize tempo: processos repetitivos transformados em scripts confiáveis."
+           data-en="Save time: repetitive processes transformed into reliable scripts.">
+            Economize tempo: processos repetitivos transformados em scripts confiáveis.
+        </p>
 
         <div class="python-grid">
             <div class="python-card">
-                <h3>Envio automático de mensagens</h3>
-                <p>Notificações por WhatsApp/Telegram usando integrações (Selenium / APIs).</p>
+                <h3 data-pt="Envio automático de mensagens" data-en="Automatic message sending">Envio automático de mensagens</h3>
+                <p data-pt="Notificações por WhatsApp/Telegram usando integrações (Selenium / APIs)."
+                   data-en="Notifications via WhatsApp/Telegram using integrations (Selenium / APIs).">
+                    Notificações por WhatsApp/Telegram usando integrações (Selenium / APIs).
+                </p>
             </div>
             <div class="python-card">
-                <h3>Extração e Relatórios</h3>
-                <p>Scripts que coletam dados, tratam e geram relatórios periódicos (CSV/PDF).</p>
+                <h3 data-pt="Extração e Relatórios" data-en="Extraction & Reports">Extração e Relatórios</h3>
+                <p data-pt="Scripts que coletam dados, tratam e geram relatórios periódicos (CSV/PDF)."
+                   data-en="Scripts that collect data, process and generate periodic reports (CSV/PDF).">
+                    Scripts que coletam dados, tratam e geram relatórios periódicos (CSV/PDF).
+                </p>
             </div>
             <div class="python-card">
-                <h3>Integrações</h3>
-                <p>Conectar seu site com ERPs, gateways de pagamento e CRMs.</p>
+                <h3 data-pt="Integrações" data-en="Integrations">Integrações</h3>
+                <p data-pt="Conectar seu site com ERPs, gateways de pagamento e CRMs."
+                   data-en="Connect your website with ERPs, payment gateways and CRMs.">
+                    Conectar seu site com ERPs, gateways de pagamento e CRMs.
+                </p>
             </div>
         </div>
 
         <div class="callout">
-            <p><strong>Exemplo:</strong> envio automático de avisos de vencimento com link de pagamento — aumenta a taxa de adimplência e reduz trabalho manual.</p>
+            <p data-pt="<strong>Exemplo:</strong> envio automático de avisos de vencimento com link de pagamento — aumenta a taxa de adimplência e reduz trabalho manual."
+               data-en="<strong>Example:</strong> automatic due date notifications with payment link — increases collection rate and reduces manual work.">
+                <strong>Exemplo:</strong> envio automático de avisos de vencimento com link de pagamento — aumenta a taxa de adimplência e reduz trabalho manual.
+            </p>
         </div>
     </div>
 </section>
@@ -216,18 +293,24 @@
 <!-- PROJETOS / PORTFÓLIO -->
 <section id="projetos" class="section projects">
     <div class="container reveal">
-        <h2 class="section-title">Projetos Recentes</h2>
-        <p class="section-subtitle">Alguns trabalhos selecionados — clique para visitar.</p>
+        <h2 class="section-title" data-pt="Projetos Recentes" data-en="Recent Projects">Projetos Recentes</h2>
+        <p class="section-subtitle" data-pt="Alguns trabalhos selecionados — clique para visitar."
+           data-en="Some selected works — click to visit.">
+            Alguns trabalhos selecionados — clique para visitar.
+        </p>
 
         <div class="projects-grid">
             <article class="project-card">
                 <img src="img/template_portfolio_medical.png" alt="Site Saúde" loading="lazy">
                 <div class="project-body">
-                    <h3>Site para Área da Saúde</h3>
-                    <p>Sistema de agendamento, integração com prontuário e área do paciente.</p>
+                    <h3 data-pt="Site para Área da Saúde" data-en="Website for Healthcare">Site para Área da Saúde</h3>
+                    <p data-pt="Sistema de agendamento, integração com prontuário e área do paciente."
+                       data-en="Scheduling system, medical record integration and patient area.">
+                        Sistema de agendamento, integração com prontuário e área do paciente.
+                    </p>
                     <div class="project-actions">
-                        <a href="#" class="btn small">Ver Projeto</a>
-                        <button class="btn small ghost" data-img="img/template_portfolio_medical.png" onclick="openModalFromCard(this)">Preview</button>
+                        <a href="#" class="btn small" data-pt="Ver Projeto" data-en="View Project">Ver Projeto</a>
+                        <button class="btn small ghost" data-img="img/template_portfolio_medical.png" onclick="openModalFromCard(this)" data-pt="Preview" data-en="Preview">Preview</button>
                     </div>
                 </div>
             </article>
@@ -235,102 +318,71 @@
             <article class="project-card">
                 <img src="img/template_e-comerce.jpg" alt="E-commerce" loading="lazy">
                 <div class="project-body">
-                    <h3>E-commerce de Roupas</h3>
-                    <p>Checkout integrado, painel administrativo e controle de estoque.</p>
+                    <h3 data-pt="E-commerce de Roupas" data-en="Clothing E-commerce">E-commerce de Roupas</h3>
+                    <p data-pt="Checkout integrado, painel administrativo e controle de estoque."
+                       data-en="Integrated checkout, admin panel and inventory control.">
+                        Checkout integrado, painel administrativo e controle de estoque.
+                    </p>
                     <div class="project-actions">
-                        <a href="#" class="btn small">Ver Projeto</a>
-                        <button class="btn small ghost" data-img="img/template_e-comerce.jpg" onclick="openModalFromCard(this)">Preview</button>
+                        <a href="#" class="btn small" data-pt="Ver Projeto" data-en="View Project">Ver Projeto</a>
+                        <button class="btn small ghost" data-img="img/template_e-comerce.jpg" onclick="openModalFromCard(this)" data-pt="Preview" data-en="Preview">Preview</button>
                     </div>
                 </div>
             </article>
 
-            <!-- exemplo de link real (adicione seus links reais) -->
             <article class="project-card">
                 <img src="img/portfolio_generic.png" alt="Portfólio" loading="lazy">
                 <div class="project-body">
-                    <h3>Portfólio Profissional</h3>
-                    <p>Site pessoal com blog e integração com Google Analytics.</p>
+                    <h3 data-pt="Portfólio Profissional" data-en="Professional Portfolio">Portfólio Profissional</h3>
+                    <p data-pt="Site pessoal com blog e integração com Google Analytics."
+                       data-en="Personal website with blog and Google Analytics integration.">
+                        Site pessoal com blog e integração com Google Analytics.
+                    </p>
                     <div class="project-actions">
-                        <a href="https://wellgusmao-developer.github.io" target="_blank" class="btn small">Visitar</a>
-                        <button class="btn small ghost" data-img="https://avatars.githubusercontent.com/u/47697200?v=4" onclick="openModalFromCard(this)">Preview</button>
+                        <a href="https://wellgusmao-developer.github.io" target="_blank" class="btn small" data-pt="Visitar" data-en="Visit">Visitar</a>
+                        <button class="btn small ghost" data-img="https://avatars.githubusercontent.com/u/47697200?v=4" onclick="openModalFromCard(this)" data-pt="Preview" data-en="Preview">Preview</button>
                     </div>
                 </div>
             </article>
         </div>
-    </div>
-</section>
-
-<!-- CLIENTES / DEPOIMENTOS -->
-<section id="clientes" class="section testimonials">
-    <div class="container reveal">
-        <h2 class="section-title">Depoimentos</h2>
-        <p class="section-subtitle">O que clientes dizem sobre meu trabalho.</p>
-
-        <div class="testimonials-grid">
-            <blockquote class="testimonial-card">
-                <p>"O projeto foi entregue antes do prazo e superou expectativas. Profissionalismo e comunicação excelentes."</p>
-                <cite>— Cliente 1</cite>
-            </blockquote>
-
-            <blockquote class="testimonial-card">
-                <p>"Automatizações feitas por Wellington reduziram horas de trabalho manual por semana — resultado incrível."</p>
-                <cite>— Cliente 2</cite>
-            </blockquote>
-        </div>
-    </div>
-</section>
-
-<!-- PORTFÓLIO DE SITES (links) -->
-<section id="portfolio" class="section portfolio-links">
-    <div class="container reveal">
-        <h2 class="section-title">Exemplos de sites criados</h2>
-        <p class="section-subtitle">Clique para visitar — (adicione aqui seus links reais)</p>
-
-        <div class="links-grid">
-            <a class="link-card" href="https://temposervicomilitar.site/" target="_blank">
-                <h4>temposervicomilitar.site/</h4>
-                <p>Portfólio pessoal — site de organização não governamental.</p>
-            </a>
-
-            <a class="link-card" href="https://loteriasbrasil.netlify.app/" target="_blank">
-                <h4>lotoriasbrasil.netlify.app</h4>
-                <p>Resultados (loterias) integrados ao site.</p>
-            </a>
-        </div>
-
     </div>
 </section>
 
 <!-- CONTATO -->
 <section id="contato" class="section contact">
     <div class="container reveal">
-        <h2 class="section-title">Entre em Contato</h2>
-        <p class="section-subtitle">Vamos transformar sua ideia em resultado.</p>
+        <h2 class="section-title" data-pt="Entre em Contato" data-en="Get in Touch">Entre em Contato</h2>
+        <p class="section-subtitle" data-pt="Vamos transformar sua ideia em resultado."
+           data-en="Let's transform your idea into results.">
+            Vamos transformar sua ideia em resultado.
+        </p>
 
         <div class="contact-grid">
             <form action="https://formsubmit.co/wellingtongusmao18@gmail.com" method="POST" class="contact-form">
-                <input type="text" name="nome" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu e-mail" required>
-                <input type="text" name="assunto" placeholder="Assunto (ex: Orçamento)" >
-                <textarea name="mensagem" placeholder="Como posso ajudar?" required></textarea>
+                <input type="text" name="nome" placeholder="Seu nome" data-pt-placeholder="Seu nome" data-en-placeholder="Your name" required>
+                <input type="email" name="email" placeholder="Seu e-mail" data-pt-placeholder="Seu e-mail" data-en-placeholder="Your email" required>
+                <input type="text" name="assunto" placeholder="Assunto (ex: Orçamento)" data-pt-placeholder="Assunto (ex: Orçamento)" data-en-placeholder="Subject (ex: Quote)">
+                <textarea name="mensagem" placeholder="Como posso ajudar?" data-pt-placeholder="Como posso ajudar?" data-en-placeholder="How can I help?" required></textarea>
                 <input type="hidden" name="_next" value="https://wellgusmao-developer.github.io/obrigado.html">
-                <button class="btn primary" type="submit">Enviar Mensagem</button>
+                <button class="btn primary" type="submit" data-pt="Enviar Mensagem" data-en="Send Message">Enviar Mensagem</button>
             </form>
 
             <div class="contact-info">
-                <h3>Preferência de contato</h3>
+                <h3 data-pt="Preferência de contato" data-en="Preferred contact">Preferência de contato</h3>
                 <p>Email: <a href="mailto:wellingtongusmao18@gmail.com">wellingtongusmao18@gmail.com</a></p>
                 <p>WhatsApp: <a href="https://wa.me/5598988046522" target="_blank">+55 98 98804-6522</a></p>
                 <p>GitHub: <a href="https://github.com/wellgusmao-developer" target="_blank">wellgusmao-developer</a></p>
 
                 <div class="cta-automation">
-                    <h4>Quer automatizar algo?</h4>
-                    <p>Se você tem uma rotina repetitiva (relatórios, notificações, import/export), eu posso automatizar com Python — fale comigo!</p>
-                    <a class="btn ghost" href="#python">Saiba como</a>
+                    <h4 data-pt="Quer automatizar algo?" data-en="Want to automate something?">Quer automatizar algo?</h4>
+                    <p data-pt="Se você tem uma rotina repetitiva (relatórios, notificações, import/export), eu posso automatizar com Python — fale comigo!"
+                       data-en="If you have a repetitive routine (reports, notifications, import/export), I can automate it with Python — talk to me!">
+                        Se você tem uma rotina repetitiva (relatórios, notificações, import/export), eu posso automatizar com Python — fale comigo!
+                    </p>
+                    <a class="btn ghost" href="#python" data-pt="Saiba como" data-en="Learn how">Saiba como</a>
                 </div>
             </div>
         </div>
-
     </div>
 </section>
 
@@ -339,7 +391,7 @@
     <div class="container footer-grid">
         <div>
             <strong>Wellington Gusmão</strong>
-            <p>Desenvolvedor Web & Automação • © <span id="year"></span></p>
+            <p data-pt="Desenvolvedor Web & Automação • ©" data-en="Web Developer & Automation • ©">Desenvolvedor Web & Automação • © <span id="year"></span></p>
         </div>
 
         <div class="social">
@@ -353,11 +405,59 @@
 <!-- Modal (preview) -->
 <div id="modal" class="modal" aria-hidden="true">
     <div class="modal-inner">
-        <button class="modal-close" aria-label="Fechar"><i class="fas fa-times"></i></button>
+        <button class="modal-close" aria-label="Fechar" data-pt-aria="Fechar" data-en-aria="Close"><i class="fas fa-times"></i></button>
         <img id="modal-img" src="" alt="Preview">
         <div id="caption"></div>
     </div>
 </div>
+
+<script>
+    // Language switching functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const languageSwitcher = document.getElementById('languageSwitcher');
+        let currentLanguage = 'pt';
+        
+        languageSwitcher.addEventListener('click', function() {
+            currentLanguage = currentLanguage === 'pt' ? 'en' : 'pt';
+            updateLanguage(currentLanguage);
+            updateButtonText(currentLanguage);
+        });
+        
+        function updateLanguage(lang) {
+            // Update all elements with data attributes
+            document.querySelectorAll('[data-pt]').forEach(element => {
+                if (element.hasAttribute('data-pt') && element.hasAttribute('data-en')) {
+                    if (lang === 'pt') {
+                        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                            element.placeholder = element.getAttribute('data-pt-placeholder') || element.getAttribute('data-pt');
+                        } else {
+                            element.innerHTML = element.getAttribute('data-pt');
+                        }
+                    } else {
+                        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                            element.placeholder = element.getAttribute('data-en-placeholder') || element.getAttribute('data-en');
+                        } else {
+                            element.innerHTML = element.getAttribute('data-en');
+                        }
+                    }
+                }
+            });
+            
+            // Update aria-labels
+            document.querySelectorAll('[data-pt-aria]').forEach(element => {
+                const ariaText = lang === 'pt' ? element.getAttribute('data-pt-aria') : element.getAttribute('data-en-aria');
+                element.setAttribute('aria-label', ariaText);
+            });
+        }
+        
+        function updateButtonText(lang) {
+            const buttonText = lang === 'pt' ? 'EN' : 'PT';
+            const buttonAria = lang === 'pt' ? 'Mudar idioma para Inglês' : 'Switch language to Portuguese';
+            languageSwitcher.querySelector('span').textContent = buttonText;
+            languageSwitcher.setAttribute('aria-label', buttonAria);
+        }
+    });
+</script>
 
 </body>
 </html>
